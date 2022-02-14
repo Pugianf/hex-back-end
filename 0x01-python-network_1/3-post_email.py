@@ -11,7 +11,7 @@ from sys import argv
 
 def urlRequest(url, email):
     """ Function that sends a post request """
-    values = {'email': email}
+    values = {"email": email}
 
     r = requests.post(url, data=values)
     print(r.text)
