@@ -8,11 +8,13 @@ and finally displays the body of the response
 import requests
 from sys import argv
 
+
 def urlRequest(url, email):
     """ Function that sends a post request """
     values = {'email': email}
-    r = requests.get(url, params=values)
-    print(r.text.decode('utf-8'))
+
+    r = requests.post(url, data=values)
+    print(r.text)
 
 if __name__ == "__main__":
-    urlRequest(sys.argv[1], sys.argv[2])
+    urlRequest(argv[1], argv[2])
