@@ -13,9 +13,9 @@ def getApi(u):
     user = int(u)
     done = 0
     todo = res.get('https://jsonplaceholder.typicode.com/todos',
-                    params={'userId': user}).json()
+                   params={'userId': user}).json()
     emp = res.get('https://jsonplaceholder.typicode.com/users',
-                    params={'id': user}).json()
+                   params={'id': user}).json()
 
     for i in range(len(todo)):
         if todo[i]['completed'] is True:
